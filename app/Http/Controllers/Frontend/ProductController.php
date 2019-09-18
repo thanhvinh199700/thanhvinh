@@ -125,5 +125,10 @@ class ProductController extends Controller {
         $sells = $this->productService->getSell();
         return view('test.test3', ['sell' => $sells, 'product' => $products]);
     }
+    public function test4(){
+        $products = $this->productService->getNewProduct();
+        $sells = $this->productService->getSell();
+        return view('test.test3', ['sell' => $sells, 'product' => $products]);
+    }
 
 }
