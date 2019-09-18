@@ -19,7 +19,7 @@ class OrderController extends Controller {
     public function index() {
 
         $orders = $this->orderService->getOrder();
-        return view('order.index', ['order' => $orders]);
+        return view('admin.order.index', ['order' => $orders]);
     }
 
     public function changeTrash(Order $order_id) {
@@ -40,7 +40,7 @@ class OrderController extends Controller {
     public function detail(Order $order) {
         $details = $this->orderService->detail($order);
         $info = $this->orderService->infoDetail($order);
-        return view('order.detail', ['info' => $info, 'detail' => $details]);
+        return view('admin.order.detail', ['info' => $info, 'detail' => $details]);
     }
 
     public function export() {

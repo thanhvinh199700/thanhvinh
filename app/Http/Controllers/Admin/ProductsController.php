@@ -32,7 +32,7 @@ class ProductsController extends Controller {
         $categories = $this->categoryService->getCategories($request->all());
         $brands = $this->brandService->getBrands($request->all());
         $products = $this->productService->getProducts($request->all());
-        return view('product.index', ['products' => $products, 'brand' => $brands, 'category' => $categories]);
+        return view('admin.product.index', ['products' => $products, 'brand' => $brands, 'category' => $categories]);
     }
 
     /**
@@ -43,7 +43,7 @@ class ProductsController extends Controller {
     public function create(Request $request) {
         $brand = $this->brandService->getBrands($request->all());
         $category = $this->categoryService->getCategories($request->all());
-        return view('product.create', ['category' => $category, 'brand' => $brand]);
+        return view('admin.product.create', ['category' => $category, 'brand' => $brand]);
     }
 
     /**
@@ -72,7 +72,7 @@ class ProductsController extends Controller {
         $categories = $this->categoryService->getCategories($request->all());
         $brands = $this->brandService->getBrands($request->all());
         $products = $this->productService->getProductDetail($product->id);
-        return view('product.edit', ['brand' => $brands, 'category' => $categories, 'product' => $products]);
+        return view('admin.product.edit', ['brand' => $brands, 'category' => $categories, 'product' => $products]);
     }
 
     /**

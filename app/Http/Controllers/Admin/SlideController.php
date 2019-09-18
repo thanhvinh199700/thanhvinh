@@ -34,7 +34,7 @@ class SlideController extends Controller {
      */
     public function index() {
         $slides = $this->slideService->getAllSlides();
-        return view('slide.index', ['slide' => $slides]);
+        return view('admin.slide.index', ['slide' => $slides]);
     }
 
     /**
@@ -43,7 +43,7 @@ class SlideController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function create() {
-        return view('slide.create');
+        return view('admin.slide.create');
     }
 
     /**
@@ -72,7 +72,7 @@ class SlideController extends Controller {
      */
     public function edit(Slide $slide) {
         $slides = $this->slideService->getFormEdit($slide->id);
-        return view('slide.edit', ['slide' => $slides]);
+        return view('admin.slide.edit', ['slide' => $slides]);
     }
 
     /**

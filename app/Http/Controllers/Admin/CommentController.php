@@ -21,7 +21,7 @@ class CommentController extends Controller {
      */
     public function index() {
         $comment = $this->commentService->listComment();
-        return view('comment.index', ['comments' => $comment]);
+        return view('admin.comment.index', ['comments' => $comment]);
     }
 
     /**

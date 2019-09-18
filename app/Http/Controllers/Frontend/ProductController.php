@@ -54,9 +54,9 @@ class ProductController extends Controller {
         if (Auth::check()) {
             $message = $this->messageService->userMessages(Auth::user());
             $adminSendMessages = $this->messageService->adminMessages(Auth::user());
-            return view('home', ['adminSendMessage' => $adminSendMessages, 'message' => $message, 'slide' => $slides, 'sell' => $sells, 'result' => $result, 'saleproduct' => $sale, 'categories' => $categories, 'menus' => $menu]);
+            return view('frontend.home', ['adminSendMessage' => $adminSendMessages, 'message' => $message, 'slide' => $slides, 'sell' => $sells, 'result' => $result, 'saleproduct' => $sale, 'categories' => $categories, 'menus' => $menu]);
         }
-        return view('home', ['slide' => $slides, 'sell' => $sells, 'result' => $result, 'saleproduct' => $sale, 'categories' => $categories, 'menus' => $menu]);
+        return view('frontend.home', ['slide' => $slides, 'sell' => $sells, 'result' => $result, 'saleproduct' => $sale, 'categories' => $categories, 'menus' => $menu]);
     }
 
     public function getProductCat(Category $category) {
@@ -68,14 +68,14 @@ class ProductController extends Controller {
             $message = $this->messageService->userMessages(Auth::user());
             $adminSendMessages = $this->messageService->adminMessages(Auth::user());
             if (count($productCat) > 0) {
-                return view('home.product_cat', ['adminSendMessage' => $adminSendMessages, 'message' => $message, 'slide' => $slides, 'productCat' => $productCat, 'categories' => $categories, 'menus' => $menu]);
+                return view('frontend.product_cat', ['adminSendMessage' => $adminSendMessages, 'message' => $message, 'slide' => $slides, 'productCat' => $productCat, 'categories' => $categories, 'menus' => $menu]);
             }
-            return view('home.error_empty', ['adminSendMessage' => $adminSendMessages, 'message' => $message, 'categories' => $categories, 'slide' => $slides, 'empty_error' => true, 'menus' => $menu]);
+            return view('frontend.error_empty', ['adminSendMessage' => $adminSendMessages, 'message' => $message, 'categories' => $categories, 'slide' => $slides, 'empty_error' => true, 'menus' => $menu]);
         }
         if (count($productCat) > 0) {
-            return view('home.product_cat', ['slide' => $slides, 'productCat' => $productCat, 'categories' => $categories, 'menus' => $menu]);
+            return view('frontend.product_cat', ['slide' => $slides, 'productCat' => $productCat, 'categories' => $categories, 'menus' => $menu]);
         }
-        return view('home.error_empty', ['categories' => $categories, 'slide' => $slides, 'empty_error' => true, 'menus' => $menu]);
+        return view('frontend.error_empty', ['categories' => $categories, 'slide' => $slides, 'empty_error' => true, 'menus' => $menu]);
     }
 
     public function getProductDetail($product_id) {
@@ -89,9 +89,9 @@ class ProductController extends Controller {
         if (Auth::check()) {
             $message = $this->messageService->userMessages(Auth::user());
             $adminSendMessages = $this->messageService->adminMessages(Auth::user());
-            return view('home.product_detail', ['adminSendMessage' => $adminSendMessages, 'message' => $message, 'poinRating' => $poinRating, 'products' => $products, 'productDetail' => $productDetail, 'categories' => $category, 'productRelate' => $productRelate, 'menus' => $menu, 'comment' => $comment]);
+            return view('frontend.product_detail', ['adminSendMessage' => $adminSendMessages, 'message' => $message, 'poinRating' => $poinRating, 'products' => $products, 'productDetail' => $productDetail, 'categories' => $category, 'productRelate' => $productRelate, 'menus' => $menu, 'comment' => $comment]);
         }
-        return view('home.product_detail', ['poinRating' => $poinRating, 'products' => $products, 'productDetail' => $productDetail, 'categories' => $category, 'productRelate' => $productRelate, 'menus' => $menu, 'comment' => $comment]);
+        return view('frontend.product_detail', ['poinRating' => $poinRating, 'products' => $products, 'productDetail' => $productDetail, 'categories' => $category, 'productRelate' => $productRelate, 'menus' => $menu, 'comment' => $comment]);
     }
 
     public function getProductSearch(Request $request) {
@@ -110,14 +110,14 @@ class ProductController extends Controller {
             $message = $this->messageService->userMessages(Auth::user());
             $adminSendMessages = $this->messageService->adminMessages(Auth::user());
             if (count($productSreach) > 0) {
-                return view('home.sreach_product', ['adminSendMessage' => $adminSendMessages, 'message' => $message, 'slide' => $slides, 'productSreach' => $productSreach, 'categories' => $category, 'menus' => $menu]);
+                return view('frontend.sreach_product', ['adminSendMessage' => $adminSendMessages, 'message' => $message, 'slide' => $slides, 'productSreach' => $productSreach, 'categories' => $category, 'menus' => $menu]);
             }
-            return view('home.error_empty', ['adminSendMessage' => $adminSendMessages, 'message' => $message, 'slide' => $slides, 'empty_error' => true, 'menus' => $menu]);
+            return view('frontend.error_empty', ['adminSendMessage' => $adminSendMessages, 'message' => $message, 'slide' => $slides, 'empty_error' => true, 'menus' => $menu]);
         }
         if (count($productSreach) > 0) {
-            return view('home.sreach_product', ['slide' => $slides, 'productSreach' => $productSreach, 'categories' => $category, 'menus' => $menu]);
+            return view('frontend.sreach_product', ['slide' => $slides, 'productSreach' => $productSreach, 'categories' => $category, 'menus' => $menu]);
         }
-        return view('home.error_empty', ['slide' => $slides, 'empty_error' => true, 'menus' => $menu]);
+        return view('frontend.error_empty', ['slide' => $slides, 'empty_error' => true, 'menus' => $menu]);
     }
 
     public function getPriceSegment(Request $request) {
@@ -128,9 +128,9 @@ class ProductController extends Controller {
         if (Auth::check()) {
             $message = $this->messageService->userMessages(Auth::user());
             $adminSendMessages = $this->messageService->adminMessages(Auth::user());
-            return view('home.product_price', ['adminSendMessage' => $adminSendMessages, 'message' => $message, 'slide' => $slides, 'productPrice' => $productPrice, 'categories' => $category, 'menus' => $menu]);
+            return view('frontend.product_price', ['adminSendMessage' => $adminSendMessages, 'message' => $message, 'slide' => $slides, 'productPrice' => $productPrice, 'categories' => $category, 'menus' => $menu]);
         }
-        return view('home.product_price', ['slide' => $slides, 'productPrice' => $productPrice, 'categories' => $category, 'menus' => $menu]);
+        return view('frontend.product_price', ['slide' => $slides, 'productPrice' => $productPrice, 'categories' => $category, 'menus' => $menu]);
     }
 
     public function test() {

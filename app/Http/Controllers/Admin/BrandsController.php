@@ -25,7 +25,7 @@ class BrandsController extends Controller {
      */
     public function index(Request $request) {
         $brand = $this->brandService->getBrands($request->all());
-        return view('brand.index', ['brands' => $brand]);
+        return view('admin.brand.index', ['brands' => $brand]);
     }
 
     /**
@@ -34,7 +34,7 @@ class BrandsController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function create() {
-        return view('brand.create');
+        return view('admin.brand.create');
     }
 
     /**
@@ -59,7 +59,7 @@ class BrandsController extends Controller {
      */
     public function edit(Brand $brand) {
         $brands = $this->brandService->getBrand($brand->id);
-        return view('brand.edit', ['brand' => $brands]);
+        return view('admin.brand.edit', ['brand' => $brands]);
     }
 
     /**

@@ -30,7 +30,7 @@ class NewsController extends Controller {
      */
     public function index() {
         $news = $this->newsService->getAllNews();
-        return view('news.index', ['news' => $news]);
+        return view('admin.news.index', ['news' => $news]);
     }
 
     /**
@@ -39,7 +39,7 @@ class NewsController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function create() {
-        return view('news.create');
+        return view('admin.news.create');
     }
 
     /**
@@ -68,7 +68,7 @@ class NewsController extends Controller {
      */
     public function edit(News $news) {
         $newss = $this->newsService->getFormEdit($news->id);
-        return view('news.edit', ['news' => $newss]);
+        return view('admin.news.edit', ['news' => $newss]);
     }
 
     /**

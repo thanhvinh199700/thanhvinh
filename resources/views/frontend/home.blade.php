@@ -202,6 +202,7 @@
                                         <p class="product-price" style="color: #EC4282;text-decoration: line-through">₫&nbsp;{{number_format($newproduct->price)}}</p>
                                         <p class="product-price" style="color: #EC4282">₫&nbsp;{{number_format($newproduct->saleprice)}}</p>
                                         @endif
+                                        
                                         <img src="{{asset('images/star.png')}}" width="70px"><br />
                                         @if($newproduct->quantity > 0)
                                         <a class="concu btn btn-primary" href="#" data_product_id="{{$newproduct->id}}"style="text-decoration:none;color:yellow"><i class="fa fa-cart-plus">Đặt mua hàng</i></a>
@@ -263,6 +264,7 @@
 
                                         <p class="product-price" style="color: #EC4282;text-decoration: line-through">₫&nbsp;{{number_format($saleproducts->price)}}</p>
                                         <p class="product-price" style="color: #EC4282">₫&nbsp;{{number_format($saleproducts->saleprice)}}</p>
+                                        
                                         <img src="{{asset('images/star.png')}}" width="70px"><br />
                                         @if($saleproducts->quantity > 0)
                                         <a class="concu btn btn-primary" href="#" data_product_id="{{$saleproducts->id}}"style="text-decoration:none;color:yellow"><i class="fa fa-cart-plus">Đặt mua hàng</i></a>

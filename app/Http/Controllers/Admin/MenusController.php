@@ -23,7 +23,7 @@ class MenusController extends Controller
     {
         
         $menu = $this->menuService->getMenus($request->all());
-        return view('menu.index',['menus' =>$menu]);
+        return view('admin.menu.index',['menus' =>$menu]);
     }
 
     /**
@@ -33,7 +33,7 @@ class MenusController extends Controller
      */
     public function create()
     {
-        return view('menu.create');
+        return view('admin.menu.create');
     }
 
     /**
@@ -59,7 +59,7 @@ class MenusController extends Controller
     {
         
         $menus = $this->menuService->getFormEdit($menu->id);
-        return view('menu.edit',['menu'=>$menus]);
+        return view('admin.menu.edit',['menu'=>$menus]);
     }
 
     /**

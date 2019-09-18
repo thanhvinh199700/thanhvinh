@@ -24,7 +24,7 @@ class CategoriesController extends Controller {
 
 
         $category = $this->categoryService->getCategories($request->all());
-        return view('category.index', ['categories' => $category]);
+        return view('admin.category.index', ['categories' => $category]);
     }
 
     /**
@@ -35,7 +35,7 @@ class CategoriesController extends Controller {
     public function create(Request $request) {
 
         $categories = $this->categoryService->getCategories($request->all());
-        return view('category.create', ['categories' => $categories]);
+        return view('admin.category.create', ['categories' => $categories]);
     }
 
     /**
@@ -70,7 +70,7 @@ class CategoriesController extends Controller {
         $listCategory = $this->categoryService->getCategories();
 
         $categories = $this->categoryService->getFormEditCategory($category->id);
-        return view('category.edit', ['category' => $categories, 'listCategory' => $listCategory]);
+        return view('admin.category.edit', ['category' => $categories, 'listCategory' => $listCategory]);
     }
 
     /**

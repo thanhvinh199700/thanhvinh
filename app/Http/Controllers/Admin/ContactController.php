@@ -23,7 +23,7 @@ class ContactController extends Controller {
      */
     public function index(Request $request) {      
         $contact = $this->contactService->getContact($request->all());
-        return view('contact.index',['contacts'=>$contact]);
+        return view('admin.contact.index',['contacts'=>$contact]);
     }
     public function delete(Contact $contact){  
         $this->contactService->deleteContact($contact);
