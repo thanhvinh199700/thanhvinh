@@ -64,6 +64,14 @@ class ProductController extends Controller {
         $categories = $this->categoryService->getCategoriess();
         $productCat = $this->productService->getProductCate($category->id);
         $slides = $this->slideService->get5Slides();
+        if (Auth::check()) {
+            $message = $this->messageService->userMessages(Auth::user());
+            $adminSendMessages = $this->messageService->adminMessages(Auth::user());
+            if (count($productCat) > 0) {
+                return view('home.product_cat', ['adminSendMessage' => $adminSendMessages, 'message' => $message, 'slide' => $slides, 'productCat' => $productCat, 'categories' => $categories, 'menus' => $menu]);
+            }
+            return view('home.error_empty', ['adminSendMessage' => $adminSendMessages, 'message' => $message, 'categories' => $categories, 'slide' => $slides, 'empty_error' => true, 'menus' => $menu]);
+        }
         if (count($productCat) > 0) {
             return view('home.product_cat', ['slide' => $slides, 'productCat' => $productCat, 'categories' => $categories, 'menus' => $menu]);
         }
@@ -78,6 +86,11 @@ class ProductController extends Controller {
         $productRelate = $this->productService->getProductRelate($product_id);
         $products = $this->productService->getAllProducts();
         $poinRating = $this->ratingService->getRatingOfProduct($product_id);
+        if (Auth::check()) {
+            $message = $this->messageService->userMessages(Auth::user());
+            $adminSendMessages = $this->messageService->adminMessages(Auth::user());
+            return view('home.product_detail', ['adminSendMessage' => $adminSendMessages, 'message' => $message, 'poinRating' => $poinRating, 'products' => $products, 'productDetail' => $productDetail, 'categories' => $category, 'productRelate' => $productRelate, 'menus' => $menu, 'comment' => $comment]);
+        }
         return view('home.product_detail', ['poinRating' => $poinRating, 'products' => $products, 'productDetail' => $productDetail, 'categories' => $category, 'productRelate' => $productRelate, 'menus' => $menu, 'comment' => $comment]);
     }
 
@@ -88,10 +101,19 @@ class ProductController extends Controller {
     }
 
     public function getProductSearchToSubmit(Request $request) {
+
         $menu = $this->menuService->getMenus($request->all());
         $category = $this->categoryService->getCategoriess($request->all());
         $productSreach = $this->productService->getSearchProduct($request->key);
         $slides = $this->slideService->get5Slides();
+        if (Auth::check()) {
+            $message = $this->messageService->userMessages(Auth::user());
+            $adminSendMessages = $this->messageService->adminMessages(Auth::user());
+            if (count($productSreach) > 0) {
+                return view('home.sreach_product', ['adminSendMessage' => $adminSendMessages, 'message' => $message, 'slide' => $slides, 'productSreach' => $productSreach, 'categories' => $category, 'menus' => $menu]);
+            }
+            return view('home.error_empty', ['adminSendMessage' => $adminSendMessages, 'message' => $message, 'slide' => $slides, 'empty_error' => true, 'menus' => $menu]);
+        }
         if (count($productSreach) > 0) {
             return view('home.sreach_product', ['slide' => $slides, 'productSreach' => $productSreach, 'categories' => $category, 'menus' => $menu]);
         }
@@ -103,6 +125,11 @@ class ProductController extends Controller {
         $category = $this->categoryService->getCategoriess($request->all());
         $productPrice = $this->productService->getPriceSegment($request->gia);
         $slides = $this->slideService->get5Slides();
+        if (Auth::check()) {
+            $message = $this->messageService->userMessages(Auth::user());
+            $adminSendMessages = $this->messageService->adminMessages(Auth::user());
+            return view('home.product_price', ['adminSendMessage' => $adminSendMessages, 'message' => $message, 'slide' => $slides, 'productPrice' => $productPrice, 'categories' => $category, 'menus' => $menu]);
+        }
         return view('home.product_price', ['slide' => $slides, 'productPrice' => $productPrice, 'categories' => $category, 'menus' => $menu]);
     }
 

@@ -75,14 +75,6 @@ $(document).ready(function () {
                 });
             });
         </script>
-<!--        <script>
-            $(document).ready(function () {
-                console.log(typeof (message));
-                if (typeof (message) !== 'undefined') {
-                    alert('đặt hàng thành công');
-                }
-            });
-        </script>-->
     </head>
 
     <body style="padding:0px;">
@@ -478,9 +470,9 @@ $(document).ready(function () {
                             <div class="panel-body">
                                 @if(Auth::check())
                                 <ul class="chat">
-                                    
+
                                     @foreach($message as $messages)
-                                    
+
                                     <li class="right clearfix user_id" user-id="{{$messages->user->id}}">
                                         <span class="chat-img pull-right">
                                             <img src="{{$messages->user->avatar}}" width="40px" alt="User Avatar" class="img-circle" />
@@ -495,9 +487,9 @@ $(document).ready(function () {
                                             </p>
                                         </div>
                                     </li>
-                                    
-                                    <?php $i = (count($adminSendMessage)-1);?>
-                                   
+
+                                    <?php $i = (count($adminSendMessage) - 1); ?>
+
                                     @foreach($adminSendMessage as $adminSendMessages)
                                     @if(($messages->created_at < $adminSendMessages->created_at && $messages->id+1==$adminSendMessages->id))
                                     <li class="left clearfix">
@@ -557,7 +549,7 @@ $(document).ready(function () {
                                             cache: false,
                                             data: {
                                                 "contents": contents,
-                                                "to":idAdmin
+                                                "to": idAdmin
                                             },
                                             success: function () {
 
