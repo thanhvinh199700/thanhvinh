@@ -43,7 +43,7 @@ class RatingService {
         } else {
             $totalRating = ((($poinRating5 * 5) + ($poinRating4 * 4) + ($poinRating3 * 3) + ($poinRating2 * 2) + ($poinRating1 * 1)) / $poinRating);
         }
-        return [$poinRating5, $poinRating4, $poinRating3, $poinRating2, $poinRating1, $totalRating,$poinRating];
+        return [$poinRating5, $poinRating4, $poinRating3, $poinRating2, $poinRating1, $totalRating, $poinRating];
     }
 
 }

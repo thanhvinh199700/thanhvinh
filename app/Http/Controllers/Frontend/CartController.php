@@ -55,7 +55,6 @@ class CartController extends Controller {
     }
 
     public function deleteItemInCart(Request $request, $product_id) {
-
         $c = $this->cartService->deleteItem($product_id);
         $request->Session()->get('cart', $c);
         $carts = Session('cart');
@@ -69,7 +68,6 @@ class CartController extends Controller {
     }
 
     public function updateItem(Request $request) {
-
         $c = $this->cartService->updateItem($request->get('quantity'), $request->get('product_id'));
         $request->Session()->get('cart', $c);
         return response()->json(Session('cart'));
@@ -78,7 +76,7 @@ class CartController extends Controller {
     public function payment(Request $request) {
         $cart = session('cart');
         if (Auth::check()) {
-            //$this->dispatch(new SendMailAfterPayment(Auth::user(), $cart));
+            $this->dispatch(new SendMailAfterPayment(Auth::user(), $cart));
             $this->cartService->simplePayment($request->all());
         }
         return redirect('/')->with("message", "Đặt hàng thành công");

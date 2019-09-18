@@ -32,11 +32,6 @@ class ProductsController extends Controller {
         $categories = $this->categoryService->getCategories($request->all());
         $brands = $this->brandService->getBrands($request->all());
         $products = $this->productService->getProducts($request->all());
-//        $sells = $this->productService->getSell($request->all());
-//        $brandSells = $this->productService->getBrandSell($request->all());
-//        $categorySells = $this->productService->getCategorySell($request->all());
-//        $sells = $this->productService->getRankSell($request->rank);
-//        dd($sells);
         return view('product.index', ['products' => $products, 'brand' => $brands, 'category' => $categories]);
     }
 

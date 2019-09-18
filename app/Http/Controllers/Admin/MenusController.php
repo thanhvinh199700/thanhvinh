@@ -66,7 +66,7 @@ class MenusController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  int  $menu
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request,Menus $menu)
@@ -80,7 +80,7 @@ class MenusController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int  $menu
      * @return \Illuminate\Http\Response
      */
     public function destroy(Menus $menu)

@@ -45,7 +45,6 @@ class ProductController extends Controller {
     }
 
     public function index() {
-
         $menu = $this->menuService->getMenus();
         $categories = $this->categoryService->getCategoriess();
         $result = $this->productService->getNewProduct();
@@ -55,15 +54,12 @@ class ProductController extends Controller {
         if (Auth::check()) {
             $message = $this->messageService->userMessages(Auth::user());
             $adminSendMessages = $this->messageService->adminMessages(Auth::user());
-            
-            //dd($adminSendMessages);
             return view('home', ['adminSendMessage' => $adminSendMessages, 'message' => $message, 'slide' => $slides, 'sell' => $sells, 'result' => $result, 'saleproduct' => $sale, 'categories' => $categories, 'menus' => $menu]);
         }
         return view('home', ['slide' => $slides, 'sell' => $sells, 'result' => $result, 'saleproduct' => $sale, 'categories' => $categories, 'menus' => $menu]);
     }
 
     public function getProductCat(Category $category) {
-
         $menu = $this->menuService->getMenus();
         $categories = $this->categoryService->getCategoriess();
         $productCat = $this->productService->getProductCate($category->id);
@@ -125,7 +121,8 @@ class ProductController extends Controller {
         $sells = $this->productService->getSell();
         return view('test.test3', ['sell' => $sells, 'product' => $products]);
     }
-    public function test4(){
+
+    public function test4() {
         $products = $this->productService->getNewProduct();
         $sells = $this->productService->getSell();
         return view('test.test3', ['sell' => $sells, 'product' => $products]);

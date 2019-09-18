@@ -30,7 +30,7 @@ class MessageController extends Controller {
     }
 
     public function sendMessageUser(Request $request) {
-        
+
         if ($request->to == null) {
             broadcast(new MessageSent(Auth::user(), $request->contents, 8));
             Auth::user()->messages()->create([
