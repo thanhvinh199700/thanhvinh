@@ -150,4 +150,7 @@ Route::namespace('Frontend')->group(function () {
     Route::get('message/{user}', 'MessageController@messageUser');
 });
 
+Route::get('/redirect/{social}', 'SocialAuthController@redirect');
+Route::get('/callback/{social}', 'SocialAuthController@callback');
+
 

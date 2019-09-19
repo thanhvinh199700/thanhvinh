@@ -63,23 +63,23 @@
             }
         </style>
     </head>
-    
-    <body>
-        
-        <div class="flex-center position-ref full-height">
-            
-                <div class="top-right links">
-                    @if (session()->has('admin'))
-                        <a href="">{{session('admin')->name}}</a>   
-                        <a href="admin/logout">logout</a>
-                    @else
-                        <a href="">Home</a>
 
-                        <a href="user/login_admin">Login</a>
-                    @endif
-                  
-                </div>
-           
+    <body>
+
+        <div class="flex-center position-ref full-height">
+
+            <div class="top-right links">
+                @if (session()->has('admin'))
+                <a href="">{{session('admin')->name}}</a>   
+                <a href="admin/logout">logout</a>
+                @else
+                <a href="">Home</a>
+
+                <a href="user/login_admin">Login</a>
+                @endif
+
+            </div>
+
 
             <div class="content">
 
@@ -88,6 +88,7 @@
                 </div>
 
                 <div class="links">
+                    
                     <a class="btn btn-success" href="/messages">message</a>
                     <a href="category">Categories</a>
                     <a href="/product">Products</a>

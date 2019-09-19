@@ -153,6 +153,7 @@ $(document).ready(function () {
                             @else
                             <a href="/registration" style="margin-right:50px;color:white;text-decoration: none"><i class="fa fa-registered" aria-hidden="true"style="margin-right:2px;"></i>Registrator</a>
                             <a href="/login" style="color:white;text-decoration: none"><i class="fa fa-lock" aria-hidden="true"style="margin-right:2px;"></i>Login</a>
+                            
                             @endif
                         </div>
                     </div>

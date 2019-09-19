@@ -19,7 +19,6 @@
 
 <body>
 
-
     <style >
 
         /* Coded with love by Mutiullah Samim */
@@ -124,6 +123,9 @@
                         </div>
                         <div class="d-flex justify-content-center mt-3 login_container">
                             <button type="submit" name="button" class="btn login_btn">Login</button>
+                        </div>
+                        <div class="d-flex justify-content-center mt-3 login_container">
+                            <a href="/redirect/facebook"><button type="button" name="button" class="btn btn-primary">Login Facebook</button></a>
                         </div>
                     </form>
                 </div>
