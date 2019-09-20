@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider {
      */
     public function boot() {
          //
-        view()->composer(['layouts.app','layouts.product','home.order','account.mail'],function($view)
+        view()->composer(['layouts.app','layouts.product','frontend.order','account.mail'],function($view)
         {
             if(Session::has('cart'))
             {
