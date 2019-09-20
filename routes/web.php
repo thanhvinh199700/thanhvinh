@@ -155,3 +155,7 @@ Route::get('/callback/{social}', 'SocialAuthController@callback');
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

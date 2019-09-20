@@ -2,52 +2,27 @@
 
 namespace App\Http\Controllers;
 
-use App\Services\ProductService;
-use App\Services\CategoryService;
-use App\Services\MenuService;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-protected $menuService;
-
-    /**
-     * @var CategoryService
-     */
-    protected $categoryService;
-
-    /**
-     * @var ProductService
-     */
-    protected $productService;
-
-    /**
-     * @var ProductService
-     */
-    protected $commentService;
-
     /**
      * Create a new controller instance.
-     * @param  MenuService  $menuService
-     * @param  CategoryService  $categoryService
-     * @param  ProductService  $productService
-     * @return  void
+     *
+     * @return void
      */
-    public function __construct(MenuService $menuService,
-            CategoryService $categoryService,
-            ProductService $productService
-            ) {
-        $this->menuService = $menuService;
-        $this->categoryService = $categoryService;
-        $this->productService = $productService;
-       
+    public function __construct()
+    {
+        $this->middleware('auth');
     }
 
-    public function index() {
-
-        $menu = $this->menuService->getMenus();
-        $categories = $this->categoryService->getCategoriess();
-        $result = $this->productService->getNewProduct();
-        $sale = $this->productService->getSaleProduct();
-        return view('home', ['result' => $result, 'saleproduct' => $sale, 'categories' => $categories, 'menus' => $menu]);
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function index()
+    {
+        return view('home');
     }
 }
