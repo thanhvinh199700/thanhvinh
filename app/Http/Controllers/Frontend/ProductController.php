@@ -49,14 +49,14 @@ class ProductController extends Controller {
         $categories = $this->categoryService->getCategoriess();
         $result = $this->productService->getNewProduct();
         $sale = $this->productService->getSaleProduct();
-        $sells = $this->productService->getSell();
+        //$sells = $this->productService->getSell();
         $slides = $this->slideService->get5Slides();
         if (Auth::check()) {
             $message = $this->messageService->userMessages(Auth::user());
             $adminSendMessages = $this->messageService->adminMessages(Auth::user());
-            return view('frontend.home', ['adminSendMessage' => $adminSendMessages, 'message' => $message, 'slide' => $slides, 'sell' => $sells, 'result' => $result, 'saleproduct' => $sale, 'categories' => $categories, 'menus' => $menu]);
+            return view('frontend.home', ['adminSendMessage' => $adminSendMessages, 'message' => $message, 'slide' => $slides,'result' => $result, 'saleproduct' => $sale, 'categories' => $categories, 'menus' => $menu]);
         }
-        return view('frontend.home', ['slide' => $slides, 'sell' => $sells, 'result' => $result, 'saleproduct' => $sale, 'categories' => $categories, 'menus' => $menu]);
+        return view('frontend.home', ['slide' => $slides,'result' => $result, 'saleproduct' => $sale, 'categories' => $categories, 'menus' => $menu]);
     }
 
     public function getProductCat(Category $category) {
