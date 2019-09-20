@@ -274,7 +274,6 @@ $(document).ready(function () {
                     @foreach($menus as $menu)
                     <a href="{{$menu->menu_link}}"><b style="font-family: Tahoma">{{$menu->menu_name}}</b></a>
                     @endforeach
-                    
                     @foreach($categories as $category)
                     <a href="/cat/{{$category->id}}"><b style="font-family: Tahoma">{{$category->category_name}}</b></a>
                     @endforeach

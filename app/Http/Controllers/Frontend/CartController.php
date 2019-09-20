@@ -16,12 +16,14 @@ use Session;
 use App\Jobs\SendMailAfterPayment;
 use App\Jobs\SendMailAfterPaymentOnline;
 use App\Services\CategoryService;
+use App\Services\MessageService;
 class CartController extends Controller {
 
     protected $menusService;
     protected $productService;
     protected $cartService;
     protected $categoryService;
+    protected $messageService;
     /**
      * @var ProductService
      */
@@ -32,12 +34,13 @@ class CartController extends Controller {
      * @param  ProductService  $productService
      * @return  void
      */
-    public function __construct(ProductService $productService, MenuService $menuService, CartService $cartService,CategoryService $categoryService) {
+    public function __construct(MessageService $messageService,ProductService $productService, MenuService $menuService, CartService $cartService,CategoryService $categoryService) {
 
         $this->productService = $productService;
         $this->menuService = $menuService;
         $this->cartService = $cartService;
         $this->categoryService =$categoryService;
+        $this->messageService = $messageService;
     }
 
     public function getAddToCart(request $request, $id) {
@@ -53,6 +56,11 @@ class CartController extends Controller {
     public function getPageOrder() {
         $menu = $this->menuService->getMenus();
         $categories = $this->categoryService->getCategoriess();
+         if (Auth::check()) {
+            $message = $this->messageService->userMessages(Auth::user());
+            $adminSendMessages = $this->messageService->adminMessages(Auth::user());
+             return view('frontend.order', ['adminSendMessage' => $adminSendMessages, 'message' => $message,'menus' => $menu, 'categories' => $categories]);
+         }
        
         return view('frontend.order', ['menus' => $menu, 'categories' => $categories]);
     }
