@@ -12,7 +12,6 @@
  */
 
 
-Route::group(['middleware' => ['admin']], function () {
 
     Route::get('/admin', function() {
         return view('welcome');
@@ -90,7 +89,7 @@ Route::group(['middleware' => ['admin']], function () {
         });
         Route::post('pusher_admin', 'MessagesController@sendMessageAdmin');
     });
-});
+
 
 
 
