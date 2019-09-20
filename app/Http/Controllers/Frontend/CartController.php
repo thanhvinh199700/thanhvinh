@@ -15,13 +15,13 @@ use Session;
 //sử dụng khi viết QUEUES JOB
 use App\Jobs\SendMailAfterPayment;
 use App\Jobs\SendMailAfterPaymentOnline;
-
+use App\Services\CategoryService;
 class CartController extends Controller {
 
     protected $menusService;
     protected $productService;
     protected $cartService;
-
+    protected $categoryService;
     /**
      * @var ProductService
      */
@@ -32,11 +32,12 @@ class CartController extends Controller {
      * @param  ProductService  $productService
      * @return  void
      */
-    public function __construct(ProductService $productService, MenuService $menuService, CartService $cartService) {
+    public function __construct(ProductService $productService, MenuService $menuService, CartService $cartService,CategoryService $categoryService) {
 
         $this->productService = $productService;
         $this->menuService = $menuService;
         $this->cartService = $cartService;
+        $this->categoryService =$categoryService;
     }
 
     public function getAddToCart(request $request, $id) {
@@ -51,7 +52,9 @@ class CartController extends Controller {
 
     public function getPageOrder() {
         $menu = $this->menuService->getMenus();
-        return view('frontend.order', ['menus' => $menu]);
+        $categories = $this->categoryService->getCategoriess();
+       
+        return view('frontend.order', ['menus' => $menu, 'categories' => $categories]);
     }
 
     public function deleteItemInCart(Request $request, $product_id) {
