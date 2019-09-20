@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
             'product_category' => 56,
             'brand_id' => 3,
             'product_name' => Str::random(15),
-            'image' => '1000.png',
+            'image' => '100000.png',
             'product_detail' => Str::random(100),
             'price' => '15000000',
             'sale' =>0,
