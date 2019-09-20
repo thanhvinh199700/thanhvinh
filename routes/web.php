@@ -86,7 +86,7 @@ Route::group(['middleware' => ['admin']], function () {
         Route::get('sendmail/{slide}', 'SendMailController@sendMailToUser');
         //LIVE CHAT FORM ADMIN TO USER
         Route::get('/messages', function () {
-            return view('message.showNotification');
+            return view('admin.message.showNotification');
         });
         Route::post('pusher_admin', 'MessagesController@sendMessageAdmin');
     });
