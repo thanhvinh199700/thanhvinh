@@ -51,7 +51,7 @@ class CartController extends Controller {
 
     public function getPageOrder() {
         $menu = $this->menuService->getMenus();
-        return view('home.order', ['menus' => $menu]);
+        return view('frontend.order', ['menus' => $menu]);
     }
 
     public function deleteItemInCart(Request $request, $product_id) {

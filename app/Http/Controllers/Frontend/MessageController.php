@@ -26,7 +26,7 @@ class MessageController extends Controller {
     public function messageUser(User $user) {
         $messages = $this->messageService->userMessage($user);
         $adminSendMessage = $this->messageService->adminMessage($user);
-        return view('message.message', ['message' => $messages, 'adminSendMessage' => $adminSendMessage]);
+        return view('admin.message.message', ['message' => $messages, 'adminSendMessage' => $adminSendMessage]);
     }
 
     public function sendMessageUser(Request $request) {

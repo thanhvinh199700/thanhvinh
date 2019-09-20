@@ -28,7 +28,7 @@ class ContactController extends Controller {
     public function index(Request $request) {
         $menu = $this->menuService->getMenus($request->all());
         $category = $this->categoryService->getCategoriess($request->all());
-        return View('home.contact', ['categories' => $category, 'menus' => $menu]);
+        return View('frontend.contact', ['categories' => $category, 'menus' => $menu]);
     }
 
     public function create(Request $request) {
