@@ -106,7 +106,7 @@ class ProductService {
     }
 
     public function getSell() {
-        return OrderDetail::select(DB::raw('*,sum(qty) as sum'))->with('product')->groupBy('product_id','id')->orderBy('sum', 'DESC')->take(12)->get();
+        return OrderDetail::select(DB::raw('*,sum(qty) as sum'))->with('product')->groupBy('product_id')->orderBy('sum', 'DESC')->take(12)->get();
     }
 
     public function getRankSell() {
