@@ -22,9 +22,6 @@ class SendMailToUser implements ShouldQueue {
     public function __construct($user, $slide) {
         $this->user = $user;
         $this->slide = $slide;
-        echo $user;
-        echo $slide;
-        die;
     }
 
     /**
@@ -35,7 +32,9 @@ class SendMailToUser implements ShouldQueue {
     public function handle() {
         $slide = $this->slide;
         foreach ($this->user as $b) {
+            
             $data = array('short' => $slide->short_description, 'content' => $slide->content);
+            dd($data);
             Mail::send('account.send_promotion_mail', $data, function ($message) use($b) {
                 $message->to($b->email, $b->name)->subject('Thông Báo');
             });
