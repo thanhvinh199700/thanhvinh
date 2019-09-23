@@ -22,6 +22,9 @@ class SendMailToUser implements ShouldQueue {
     public function __construct($user, $slide) {
         $this->user = $user;
         $this->slide = $slide;
+        echo $user;
+        echo $slide;
+        die;
     }
 
     /**
