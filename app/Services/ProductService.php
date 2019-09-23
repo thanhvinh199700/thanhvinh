@@ -113,13 +113,13 @@ class ProductService {
         if (request()->get('rank') != null) {
             switch (request()->get('rank')) {
                 case'product':
-                    return OrderDetail::select(DB::raw('id,sum(qty) as sum'))->with('product')->groupBy('product_id','id')->orderBy('sum', 'DESC')->get();
+                    return OrderDetail::select(DB::raw('*,sum(qty) as sum'))->with('product')->groupBy('product_id','id')->orderBy('sum', 'DESC')->get();
                 case'brand':
-                    return OrderDetail::select(DB::raw('id,sum(qty) as sum'))->with('brand')->groupBy('brand_id','id')->orderBy('sum', 'DESC')->get();
+                    return OrderDetail::select(DB::raw('*,sum(qty) as sum'))->with('brand')->groupBy('brand_id','id')->orderBy('sum', 'DESC')->get();
                 case'category':
-                    return OrderDetail::select(DB::raw('id,sum(qty) as sum'))->with('category')->groupBy('category_id','id')->orderBy('sum', 'DESC')->get();
+                    return OrderDetail::select(DB::raw('*,sum(qty) as sum'))->with('category')->groupBy('category_id','id')->orderBy('sum', 'DESC')->get();
                 default :
-                    return OrderDetail::select(DB::raw('id,sum(qty) as sum'))->with('product')->groupBy('product_id','id')->orderBy('sum', 'DESC')->get();
+                    return OrderDetail::select(DB::raw('*,sum(qty) as sum'))->with('product')->groupBy('product_id','id')->orderBy('sum', 'DESC')->get();
             }
         }
     }
