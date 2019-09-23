@@ -31,10 +31,10 @@ class SendMailToUser implements ShouldQueue {
      * @return void
      */
     public function handle() {
-        $slide = $this->slide;
+       // $slide = $this->slide;
         foreach ($this->user as $b) {
-            $data = array('short' => $slide->short_description, 'content' => $slide->content);
-            Mail::send('account.send_promotion_mail', $data, function ($message) use($b) {
+            //$data = array('short' => $slide->short_description, 'content' => $slide->content);
+            Mail::send('account.send_promotion_mail',[], function ($message) use($b) {
                 $message->to($b->email, $b->name)->subject('Thông Báo');
                
             });
