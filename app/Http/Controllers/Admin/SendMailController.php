@@ -20,6 +20,7 @@ class SendMailController extends Controller {
     public function sendMailToUser(Slide $slide) {
         $user = $this->userService->getUsers();
         $this->dispatch(new SendMailToUser($user,$slide));
+        dd($this->dispatch(new SendMailToUser($user,$slide)));
         return redirect()->back()->with('message','Gửi thông báo tới khách hàng thành công');
     }
 
