@@ -9,17 +9,14 @@ use Illuminate\Support\Facades\Auth;
 class RatingService {
 
     public function reviews($data, $product) {
-        $a = rand(1,1000);
-       // dd($a);
         if (Auth::check()) {
-            $b=Rating::create([
-                'id'=>$a,
+            Rating::create([
+                'id' => rand(1, 1000),
                 'user_id' => Auth()->user()->id,
                 'product_id' => $product->id,
                 'rating' => $data['rating']
             ]);
         }
-        dd($b);
     }
 
     public function getRatingOfProduct($product_id) {

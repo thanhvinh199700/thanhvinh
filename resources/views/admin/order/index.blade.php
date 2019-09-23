@@ -75,8 +75,7 @@
 
         @foreach ($order as $orders)
         <tr>
-            
-
+           
             <td>
                 {{$orders->id}}
             </td>
