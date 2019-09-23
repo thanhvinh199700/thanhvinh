@@ -10,14 +10,16 @@ class RatingService {
 
     public function reviews($data, $product) {
         $a = rand(1,1000);
+       // dd($a);
         if (Auth::check()) {
-            Rating::create([
+            $b=Rating::create([
                 'id'=>$a,
                 'user_id' => Auth()->user()->id,
                 'product_id' => $product->id,
                 'rating' => $data['rating']
             ]);
         }
+        dd($b);
     }
 
     public function getRatingOfProduct($product_id) {

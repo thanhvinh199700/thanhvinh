@@ -36,9 +36,7 @@
             <th>
                 MÃ ĐƠN HÀNG 
             </th>
-            <th>
-                THỜI GIAN
-            </th>
+           
 
             <th>
                 TÊN KHÁCH HÀNG
@@ -79,9 +77,7 @@
             <td>
                 {{$orders->id}}
             </td>
-            <td>
-                {{$orders->order_date}}
-            </td>
+           
             <td>
                 {{$orders->full_name}}
             </td>
