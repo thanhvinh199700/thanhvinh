@@ -75,7 +75,7 @@
 
         @foreach ($order as $orders)
         <tr>
-            <?php dd($orders);?>
+            
 
             <td>
                 {{$orders->id}}
