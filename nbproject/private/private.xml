@@ -4,15 +4,26 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/workspace/blog/routes/channels.php</file>
-            <file>file:/D:/workspace/blog/app/Message.php</file>
-            <file>file:/D:/workspace/blog/resources/views/showNotification.blade.php</file>
-            <file>file:/D:/workspace/blog/app/Http/Controllers/MessageController.php</file>
-            <file>file:/D:/workspace/blog/app/Models/Category.php</file>
-            <file>file:/D:/workspace/blog/resources/views/test.blade.php</file>
-            <file>file:/D:/workspace/blog/resources/views/layouts/app.blade.php</file>
-            <file>file:/D:/workspace/blog/routes/web.php</file>
+            <file>file:/D:/workspace/blog/app/Jobs/SendMailToUser.php</file>
+            <file>file:/D:/workspace/blog/resources/views/account/send_promotion_mail.blade.php</file>
+            <file>file:/D:/workspace/blog/app/Models/Rating.php</file>
+            <file>file:/D:/workspace/blog/app/Services/UserService.php</file>
+            <file>file:/D:/workspace/blog/.env</file>
+            <file>file:/D:/workspace/blog/app/Models/Order.php</file>
             <file>file:/D:/workspace/blog/resources/views/layouts/product.blade.php</file>
             <file>file:/D:/workspace/blog/app/Http/Controllers/Frontend/ProductController.php</file>
+            <file>file:/D:/workspace/blog/.env.production</file>
+            <file>file:/D:/workspace/blog/app/Http/Controllers/Admin/SendMailController.php</file>
+            <file>file:/D:/workspace/blog/Procfile</file>
+            <file>file:/D:/workspace/blog/resources/views/frontend/home.blade.php</file>
+            <file>file:/D:/workspace/blog/app/Models/Category.php</file>
+            <file>file:/D:/workspace/blog/app/Services/ProductService.php</file>
+            <file>file:/D:/workspace/blog/app/Services/RatingService.php</file>
+            <file>file:/D:/workspace/blog/app/Http/Controllers/Frontend/RatingController.php</file>
+            <file>file:/D:/workspace/blog/resources/views/admin/order/index.blade.php</file>
+            <file>file:/D:/workspace/blog/resources/views/layouts/app.blade.php</file>
+            <file>file:/D:/workspace/blog/database/migrations/2019_08_22_064057_create_rating_table.php</file>
+            <file>file:/D:/workspace/blog/routes/web.php</file>
         </group>
     </open-files>
 </project-private>
