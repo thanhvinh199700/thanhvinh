@@ -365,7 +365,7 @@ $(document).ready(function () {
         <div class="row"style="">
             <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
                 <div class="container-fluid">
-                    <img src="{{asset('images/THONG-DIEP-IPHONE.png')}}" width="98.5%" style="margin-left: 15px;height: 120px;">
+                    <img src="{{secure_asset('images/THONG-DIEP-IPHONE.png')}}" width="98.5%" style="margin-left: 15px;height: 120px;">
                 </div>
             </div>
         </div>
@@ -628,9 +628,9 @@ $(document).ready(function () {
                             <p class="sococial">
                                 <a target="blank_" href="https://www.facebook.com/Studionoithat" title="Chia sẻ lên facebook"><img src="{{asset('images/7.jpg')}}"></a>
                                 <a target="blank_" href="https://twitter.com/studionoithat" title="Chia sẻ lên Twitter"><img src="{{asset('images/8.jpg')}}"></a>
-                                <span><a href="#"><img src="{{asset('images/9.jpg')}}"></a></span>
-                                <span><a href="#"><img src="{{asset('images/10.jpg')}}"></a></span>
-                                <span><a href="#"><img src="{{asset('images/11.jpg')}}"></a></span>
+                                <span><a href="#"><img src="{{secure_asset('images/9.jpg')}}"></a></span>
+                                <span><a href="#"><img src="{{secure_asset('images/10.jpg')}}"></a></span>
+                                <span><a href="#"><img src="{{secure_asset('images/11.jpg')}}"></a></span>
                             </p>
                         </div>
                     </div>
@@ -653,7 +653,7 @@ $(document).ready(function () {
                             <ul class="menu_info_wapper_ul">
                                 <li>
                                     <div class="posioton-footer-icon">
-                                        <img src="{{asset('images/4.png')}}">
+                                        <img src="{{secure_asset('images/4.png')}}">
 
                                     </div>
                                     <h5><strong>TPHCM</strong></h5>
@@ -661,7 +661,7 @@ $(document).ready(function () {
                                 </li>
                                 <li>
                                     <div class="posioton-footer-icon">
-                                        <img src="{{asset('images/4.png')}}">
+                                        <img src="{{secure_asset('images/4.png')}}">
 
                                     </div>
                                     <h5><strong>Hà Nội</strong></h5>
@@ -669,7 +669,7 @@ $(document).ready(function () {
                                 </li>
                                 <li>
                                     <div class="posioton-footer-icon">
-                                        <img src="{{asset('images/4.png')}}">
+                                        <img src="{{secure_asset('images/4.png')}}">
 
                                     </div>
                                     <h5><strong>Ninh Thuận</strong></h5>
