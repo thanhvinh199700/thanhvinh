@@ -80,7 +80,7 @@
                                                         <p class="product-price" style="color: #EC4282;text-decoration: line-through">₫&nbsp;{{number_format($sell[$r]['product']->price)}}</p>
                                                         <p class="product-price" style="color: #EC4282">₫&nbsp;{{number_format($sell[$r]['product']->saleprice)}}</p>
                                                         @endif
-                                                        <img src="{{asset('images/star.png')}}" width="70px"><br />
+                                                        <img src="{{secure_asset('images/star.png')}}" width="70px"><br />
                                                         @if($sell[$r]['product']->quantity > 0)
                                                         <a class="concu btn btn-primary" href="#" data_product_id="{{$sell[$r]['product']->id}}"style="text-decoration:none;color:yellow"><i class="fa fa-cart-plus">Đặt mua hàng</i></a>
                                                         @else
@@ -127,7 +127,7 @@
                                                         <p class="product-price" style="color: #EC4282;text-decoration: line-through">₫&nbsp;{{number_format($sell[$r]['product']->price)}}</p>
                                                         <p class="product-price" style="color: #EC4282">₫&nbsp;{{number_format($sell[$r]['product']->saleprice)}}</p>
                                                         @endif
-                                                        <img src="{{asset('images/star.png')}}" width="70px"><br />
+                                                        <img src="{{secure_asset('images/star.png')}}" width="70px"><br />
                                                         @if($sell[$r]['product']->quantity > 0)
                                                         <a class="concu btn btn-primary" href="#" data_product_id="{{$sell[$r]['product']->id}}"style="text-decoration:none;color:yellow"><i class="fa fa-cart-plus">Đặt mua hàng</i></a>
                                                         @else
