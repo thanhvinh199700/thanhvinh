@@ -8,12 +8,12 @@
         <meta name="_token" content="{{ csrf_token() }}">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 
-        <link href="{{asset('css/style.css')}}" rel="stylesheet" />
+        <link href="{{secure_asset('css/style.css')}}" rel="stylesheet" />
 
         <link href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-        <script src="{{asset('js/update_cart.js')}}"></script>
+        <script src="{{secure_asset('js/update_cart.js')}}"></script>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
         <script src="https://js.pusher.com/5.0/pusher.min.js"></script>
         <script>
@@ -46,7 +46,7 @@ $(document).ready(function () {
 
                         //console.log(response.items);
                         $('div.cart div.beta-select').empty();
-                        $('div.cart div.beta-select').append("\<img src='{{asset('images/giohang.jpg')}}' width='50px'>\n\
+                        $('div.cart div.beta-select').append("\<img src='{{secure_asset('images/giohang.jpg')}}' width='50px'>\n\
                             <span style='color: #999;' id='cart'>" + response.totalQty + "&nbsp;Sản&nbsp;phẩm</span>");
                         $('div.cart div.cart-body').empty();
                         for (x in response.items) {
@@ -164,7 +164,7 @@ $(document).ready(function () {
             <div class="container-fluid">
                 <div class="col-lg-3 col-md-3 col-xs-12 col-sm-12" style="margin-top:15px;">
                     <a href="/">
-                        <img src="{{asset('images/logo1.png')}}" class="img-responsive" />
+                        <img src="{{secure_asset('images/logo1.png')}}" class="img-responsive" />
                     </a>
                 </div>
                 <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12" style="margin-top:26px;margin-left:0px;">
@@ -224,7 +224,7 @@ $(document).ready(function () {
                 <div class="col-lg-2 col-md-2 col-xs-6 col-sm-6" style="margin-top:20px;">                 
                     <div class="cart">
                         <div class="beta-select nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img src="{{asset('images/giohang.jpg')}}" width="50px"> 
+                            <img src="{{secure_asset('images/giohang.jpg')}}" width="50px">
                             <span style="color: #999;" id="cart">
                                 @if(Session::has('cart'))
                                 {{Session('cart')->totalQty}}
@@ -516,9 +516,9 @@ $(document).ready(function () {
                             <p class="sococial">
                                 <a target="blank_" href="https://www.facebook.com/Studionoithat" title="Chia sẻ lên facebook"><img src="{{asset('images/7.jpg')}}"></a>
                                 <a target="blank_" href="https://twitter.com/studionoithat" title="Chia sẻ lên Twitter"><img src="{{asset('images/8.jpg')}}"></a>
-                                <span><a href="#"><img src="{{asset('images/9.jpg')}}"></a></span>
-                                <span><a href="#"><img src="{{asset('images/10.jpg')}}"></a></span>
-                                <span><a href="#"><img src="{{asset('images/11.jpg')}}"></a></span>
+                                <span><a href="#"><img src="{{secure_asset('images/9.jpg')}}"></a></span>
+                                <span><a href="#"><img src="{{secure_asset('images/10.jpg')}}"></a></span>
+                                <span><a href="#"><img src="{{secure_asset('images/11.jpg')}}"></a></span>
                             </p>
                         </div>
                     </div>
@@ -541,7 +541,7 @@ $(document).ready(function () {
                             <ul class="menu_info_wapper_ul">
                                 <li>
                                     <div class="posioton-footer-icon">
-                                        <img src="{{asset('images/4.png')}}">
+                                        <img src="{{secure_asset('images/4.png')}}">
 
                                     </div>
                                     <h5><strong>TPHCM</strong></h5>
@@ -549,7 +549,7 @@ $(document).ready(function () {
                                 </li>
                                 <li>
                                     <div class="posioton-footer-icon">
-                                        <img src="{{asset('images/4.png')}}">
+                                        <img src="{{secure_asset('images/4.png')}}">
 
                                     </div>
                                     <h5><strong>Hà Nội</strong></h5>
@@ -557,7 +557,7 @@ $(document).ready(function () {
                                 </li>
                                 <li>
                                     <div class="posioton-footer-icon">
-                                        <img src="{{asset('images/4.png')}}">
+                                        <img src="{{secure_asset('images/4.png')}}">
 
                                     </div>
                                     <h5><strong>Ninh Thuận</strong></h5>
