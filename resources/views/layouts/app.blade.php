@@ -165,7 +165,7 @@ $(document).ready(function () {
             <div class="container-fluid">
                 <div class="col-lg-3 col-md-3 col-xs-12 col-sm-12" style="margin-top:15px;">
                     <a href="/">
-                        <img src="{{asset('images/logo1.png')}}" class="img-responsive" />
+                        <img src="{{secure_asset('images/logo1.png')}}" class="img-responsive" />
                     </a>
                 </div>
                 <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12" style="margin-top:26px;margin-left:0px;">
@@ -225,7 +225,7 @@ $(document).ready(function () {
                 <div class="col-lg-2 col-md-2 col-xs-6 col-sm-6" style="margin-top:20px;">                 
                     <div class="cart">
                         <div class="beta-select nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img src="{{asset('images/giohang.jpg')}}" width="50px"> 
+                            <img src="{{secure_asset('images/giohang.jpg')}}" width="50px">
                             <span style="color: #999;" id="cart">
                                 @if(Session::has('cart'))
                                 {{Session('cart')->totalQty}}
@@ -330,7 +330,7 @@ $(document).ready(function () {
                     </div>
                     <div class="col-lg-4 col-md-5 col-xs-12 col-sm-6">
                         <div>
-                            <img src="{{asset('images//news/1.jpg')}}" width="100%" style="height:250px;">
+                            <img src="{{secure_asset('images//news/1.jpg')}}" width="100%" style="height:250px;">
                         </div>
                         <div><iframe width="100%" height="285" src="https://www.youtube.com/embed/FxUu9pizUkI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
                     </div>
