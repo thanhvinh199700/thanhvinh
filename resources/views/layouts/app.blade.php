@@ -626,8 +626,8 @@ $(document).ready(function () {
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xs-12" style="margin-top:40px;">
                         <div class="menu_info_wapper">
                             <p class="sococial">
-                                <a target="blank_" href="https://www.facebook.com/Studionoithat" title="Chia sẻ lên facebook"><img src="{{asset('images/7.jpg')}}"></a>
-                                <a target="blank_" href="https://twitter.com/studionoithat" title="Chia sẻ lên Twitter"><img src="{{asset('images/8.jpg')}}"></a>
+                                <a target="blank_" href="https://www.facebook.com/Studionoithat" title="Chia sẻ lên facebook"><img src="{{secure_asset('images/7.jpg')}}"></a>
+                                <a target="blank_" href="https://twitter.com/studionoithat" title="Chia sẻ lên Twitter"><img src="{{secure_asset('images/8.jpg')}}"></a>
                                 <span><a href="#"><img src="{{secure_asset('images/9.jpg')}}"></a></span>
                                 <span><a href="#"><img src="{{secure_asset('images/10.jpg')}}"></a></span>
                                 <span><a href="#"><img src="{{secure_asset('images/11.jpg')}}"></a></span>
