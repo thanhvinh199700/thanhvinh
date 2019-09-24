@@ -8,12 +8,12 @@
         <meta name="_token" content="{{ csrf_token() }}">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 
-        <link href="{{asset('css/style.css')}}" rel="stylesheet" />
+        <link href="{{secure_asset('css/style.css')}}" rel="stylesheet" />
 
         <link href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-        <script src="{{asset('js/update_cart.js')}}"></script>
+        <script src="{{secure_asset('js/update_cart.js')}}"></script>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
         <script src="https://js.pusher.com/5.0/pusher.min.js"></script>
         <script>
@@ -46,7 +46,7 @@ $(document).ready(function () {
 
                         //console.log(response.items);
                         $('div.cart div.beta-select').empty();
-                        $('div.cart div.beta-select').append("\<img src='{{asset('images/giohang.jpg')}}' width='50px'>\n\
+                        $('div.cart div.beta-select').append("\<img src='{{secure_asset('images/giohang.jpg')}}' width='50px'>\n\
                             <span style='color: #999;' id='cart'>" + response.totalQty + "&nbsp;Sản&nbsp;phẩm</span>");
                         $('div.cart div.cart-body').empty();
                         for (x in response.items) {
