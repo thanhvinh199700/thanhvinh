@@ -14,7 +14,7 @@ class OrdersExport implements FromView {
      */
     public function view(): View {
         libxml_use_internal_errors(true);
-        return view('report.order_excel', [
+        return view('admin.report.order_excel', [
             'order' => Order::all()
         ]);
     }

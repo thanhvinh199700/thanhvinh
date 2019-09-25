@@ -22,7 +22,7 @@ class OrderDetailExport implements FromView {
         $details = $orderService->detail($this->a);
         $info = $orderService->infoDetail($this->a);
         libxml_use_internal_errors(true);
-        return view('report.order_detail_excel', [
+        return view('admin.report.order_detail_excel', [
             'detail' => $details,
             'info' => $info
         ]);
