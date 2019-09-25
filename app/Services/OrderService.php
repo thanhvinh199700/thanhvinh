@@ -25,11 +25,11 @@ class OrderService {
     }
 
     public function deleteOrder($Order) {
-        $order = Order::find($Order->id);
-        //dd(($order->trash));
-        if (($Order->orderDetails()->exists()) || ($order->trash) == 0) {
-            throw new \Exception('còn sản phẩm trong chi tiết sản phẩm thuộc hóa đơn hoặc đơn hàng đang trong trạng thái không được xóa');
-        }
+//        $order = Order::find($Order->id);
+////        //dd(($order->trash));
+////        if (($Order->orderDetails()->exists()) || ($order->trash) == 0) {
+////            throw new \Exception('còn sản phẩm trong chi tiết sản phẩm thuộc hóa đơn hoặc đơn hàng đang trong trạng thái không được xóa');
+////        }
         $Order->delete();
     }
 
