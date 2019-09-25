@@ -46,7 +46,7 @@
                         </div>
                     </div>
                 </div>
-                <img src="{{asset('images/mai2018.png')}}">
+                <img src="{{secure_asset('images/mai2018.png')}}">
 
             </div>
             <div class="col-lg-10 col-md-9 col-sm-12 col-xs-12">
@@ -74,7 +74,7 @@
                                 <p class="status">Tình trạng : <span class="pink" style="color:#dc3545">Còn hàng</span></p>
                                 <p class="status">Mã sản phẩm :<span class="pink" style="color:#dc3545">{{$productDetail->id}}</span></p>
 
-                                <p class="status">Đánh giá :<span class="pink" style="color:#dc3545">{{$poinRating[5]}}<img src="{{asset('images/images.jpg')}}" width="30px" style="margin-top:-10px;"><br></span></p>
+                                <p class="status">Đánh giá :<span class="pink" style="color:#dc3545">{{$poinRating[5]}}<img src="{{secure_asset('images/images.jpg')}}" width="30px" style="margin-top:-10px;"><br></span></p>
                                 <hr>
                                 <div class="product-price-block">
                                     <p class="product-price" style="font-weight: bold; font-size: 20px; color: #dc3545">₫&nbsp;{{number_format($productDetail->price)}}</p>
@@ -219,36 +219,36 @@
                         <div class="container" style="margin-left: -10px;height: 150px;">
                             <div class="col-lg-4 col-md-4" style="height: 210px;border: 1px solid #d8d8d8;text-align: center;padding-top: 30px">
                                 <div class="ex_chiba ex_diemsao">
-                                    <h1 class="ex_diemso" style="color: #fd9727">{{$poinRating[5]}}<img style="margin-top: -15px;"src="{{asset('images/rating.png')}}" width="50px;"/></h1>
+                                    <h1 class="ex_diemso" style="color: #fd9727">{{$poinRating[5]}}<img style="margin-top: -15px;"src="{{secure_asset('images/rating.png')}}" width="50px;"/></h1>
                                     <a href="">{{$poinRating[6]}} đánh giá &amp; nhận xét</a>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4" style="height: 210px;border: 1px solid #d8d8d8;text-align: center;padding-top: 30px">
                                 <ul>                      
                                     <li style = "list-style-type: none;">
-                                        <span class = "ex_5sao" style = "font-size: 20px;">5<img src = "{{asset('images/rating.png')}}" width = "10px;"/></span>
+                                        <span class = "ex_5sao" style = "font-size: 20px;">5<img src = "{{secure_asset('images/rating.png')}}" width = "10px;"/></span>
                                         <span class = "ex_5sao">đã có được tổng cộng là :</span>
-                                        <span class = "ex_sdem" style = "font-size: 20px;">{{$poinRating[0]}} <img src="{{asset('images/danhgia.png')}}" width="35px"/></span>
+                                        <span class = "ex_sdem" style = "font-size: 20px;">{{$poinRating[0]}} <img src="{{secure_asset('images/danhgia.png')}}" width="35px"/></span>
                                     </li>
                                     <li style = "list-style-type: none;">
-                                        <span class = "ex_5sao" style = "font-size: 20px;">4<img src = "{{asset('images/rating.png')}}" width = "10px;"/></span>
+                                        <span class = "ex_5sao" style = "font-size: 20px;">4<img src = "{{secure_asset('images/rating.png')}}" width = "10px;"/></span>
                                         <span class = "ex_5sao">đã có được tổng cộng là :</span>
-                                        <span class = "ex_sdem" style = "font-size: 20px;">{{$poinRating[1]}} <img src="{{asset('images/danhgia.png')}}" width="35px"/></span>
+                                        <span class = "ex_sdem" style = "font-size: 20px;">{{$poinRating[1]}} <img src="{{secure_asset('images/danhgia.png')}}" width="35px"/></span>
                                     </li>
                                     <li style = "list-style-type: none;">
-                                        <span class = "ex_5sao" style = "font-size: 20px;">3<img src = "{{asset('images/rating.png')}}" width = "10px;"/></span>
+                                        <span class = "ex_5sao" style = "font-size: 20px;">3<img src = "{{secure_asset('images/rating.png')}}" width = "10px;"/></span>
                                         <span class = "ex_5sao">đã có được tổng cộng là :</span>
-                                        <span class = "ex_sdem" style = "font-size: 20px;">{{$poinRating[2]}} <img src="{{asset('images/danhgia.png')}}" width="35px"/></span>
+                                        <span class = "ex_sdem" style = "font-size: 20px;">{{$poinRating[2]}} <img src="{{secure_asset('images/danhgia.png')}}" width="35px"/></span>
                                     </li>
                                     <li style = "list-style-type: none;">
-                                        <span class = "ex_5sao" style = "font-size: 20px;">2<img src = "{{asset('images/rating.png')}}" width = "10px;"/></span>
+                                        <span class = "ex_5sao" style = "font-size: 20px;">2<img src = "{{secure_asset('images/rating.png')}}" width = "10px;"/></span>
                                         <span class = "ex_5sao">đã có được tổng cộng là :</span>
-                                        <span class = "ex_sdem" style = "font-size: 20px;">{{$poinRating[3]}} <img src="{{asset('images/danhgia.png')}}" width="35px"/></span>
+                                        <span class = "ex_sdem" style = "font-size: 20px;">{{$poinRating[3]}} <img src="{{secure_asset('images/danhgia.png')}}" width="35px"/></span>
                                     </li>
                                     <li style = "list-style-type: none;">
-                                        <span class = "ex_5sao" style = "font-size: 20px;">1<img src = "{{asset('images/rating.png')}}" width = "10px;"/></span>
+                                        <span class = "ex_5sao" style = "font-size: 20px;">1<img src = "{{secure_asset('images/rating.png')}}" width = "10px;"/></span>
                                         <span class = "ex_5sao">đã có được tổng cộng là :</span>
-                                        <span class = "ex_sdem" style = "font-size: 20px;">{{$poinRating[4]}} <img src="{{asset('images/danhgia.png')}}" width="35px"/></span>
+                                        <span class = "ex_sdem" style = "font-size: 20px;">{{$poinRating[4]}} <img src="{{secure_asset('images/danhgia.png')}}" width="35px"/></span>
                                     </li>
                                 </ul>
                             </div>
@@ -258,7 +258,7 @@
                                 <h3>Đánh giá của bạn</h3>
                                 <form action="/rating/{{$productDetail->id}}" method="POST" name="danhgia">
                                     @csrf
-                                    <input type="number" name="rating" min="1" max="5" width="50px;"><img src="{{asset('images/rating.png')}}" width="20px;"/>
+                                    <input type="number" name="rating" min="1" max="5" width="50px;"><img src="{{secure_asset('images/rating.png')}}" width="20px;"/>
                                     <input type="submit" class="btn btn-success btn-md danhgia">
                                 </form>
                             </div>
