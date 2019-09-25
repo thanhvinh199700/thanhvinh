@@ -106,7 +106,7 @@ class CartService {
     public function simplePayment(array $data) {
         $cart = Session('cart');
         //dd($cart);
-        $dt = date('y-m-d H:1:S');
+        $dt = getdate(timestamp);
         if ((request()->get('vpc_TxnResponseCode')) != null) {
             if (Auth::check()) {
                 $order = Order::create([
