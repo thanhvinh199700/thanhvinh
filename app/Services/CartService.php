@@ -105,12 +105,9 @@ class CartService {
 
     public function simplePayment(array $data) {
         $cart = Session('cart');
-        //dd($cart);
-        $dt = date('d/m/Y H:i:s');
         if ((request()->get('vpc_TxnResponseCode')) != null) {
             if (Auth::check()) {
                 $order = Order::create([
-                            'order_date' => "25/09/2019",
                             'full_name' => Auth::user()->name,
                             'email' => Auth::user()->email,
                             'address' => Auth::user()->address,
@@ -123,7 +120,6 @@ class CartService {
             }
         } else {
             $order = Order::create([
-                        'order_date' => "25/09/2019",
                         'full_name' => $data['inputName'],
                         'email' => $data['inputEmail'],
                         'address' => $data['inputAddress'],
